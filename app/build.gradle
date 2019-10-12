@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.archaeanx.lib"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation "junit:junit:${extJunit}"
+    androidTestImplementation "androidx.test:runner:${extRunner}"
+    androidTestImplementation "androidx.test.espresso:espresso-core:${extEspressoCore}"
+
+
+    implementation "androidx.constraintlayout:constraintlayout:${extConstraintLayout}"
+    implementation "androidx.appcompat:appcompat:${extAppcompat}"
+    implementation "androidx.recyclerview:recyclerview:${extRecyclerview}"
+
+
+    implementation 'com.archeanx.android:lib_tv_vlc:1.0.4'
+    implementation project(':libx_adapter')
+    implementation project(':libx_util')
+    implementation project(':libx_widget')
+    implementation project(path: ':libx_app_update')
+}
