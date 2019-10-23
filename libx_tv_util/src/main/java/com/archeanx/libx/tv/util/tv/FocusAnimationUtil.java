@@ -1,4 +1,4 @@
-package com.archeanx.libx.tv.widget.tv;
+package com.archeanx.libx.tv.util.tv;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
