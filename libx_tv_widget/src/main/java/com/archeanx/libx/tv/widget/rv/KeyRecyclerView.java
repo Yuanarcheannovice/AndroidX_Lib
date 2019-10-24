@@ -25,34 +25,29 @@ public class KeyRecyclerView extends RecyclerView {
 
     public KeyRecyclerView(Context context) {
         super(context);
-        initOther();
     }
 
     public KeyRecyclerView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        initOther();
     }
 
     public KeyRecyclerView(Context context, @Nullable AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        initOther();
 
     }
 
-    private void initOther() {
-        if (isEnableShowBigItem) {
-            //启用子视图排序功能
-            setChildrenDrawingOrderEnabled(true);
-        }
-    }
+
 
     /**
      * 是否启用子view变大效果
+     * 如果没有覆盖到其他view的时候，不要用这个方法，损耗性能
      *
      * @param isEnable true 启用
      */
-    public void EnableShowBigItem(boolean isEnable) {
+    public void setEnableShowBigItem(boolean isEnable) {
         isEnableShowBigItem = isEnable;
+        //启用子视图排序功能
+        setChildrenDrawingOrderEnabled(isEnable);
     }
 
 
