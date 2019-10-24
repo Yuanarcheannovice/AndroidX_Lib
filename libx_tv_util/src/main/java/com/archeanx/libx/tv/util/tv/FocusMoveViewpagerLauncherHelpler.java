@@ -13,7 +13,7 @@ import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.archeanx.libx.tv.widget.R;
+import com.archeanx.libx.tv.util.R;
 
 
 /**

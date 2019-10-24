@@ -9,7 +9,7 @@ import android.view.ViewTreeObserver;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 
-import com.archeanx.libx.tv.widget.R;
+import com.archeanx.libx.tv.util.R;
 
 
 /**
@@ -20,7 +20,7 @@ import com.archeanx.libx.tv.widget.R;
 public class FocusMoveUtil {
 
     public static View initFocusView(Activity activity) {
-       return initFocusView(activity, 0);
+        return initFocusView(activity, 0);
     }
 
     /**
@@ -109,7 +109,7 @@ public class FocusMoveUtil {
         //标识fragment最大的布局的id
         FocusMoveHelper.getInstance().addFragParentViewIds(parentView.getId(), parentView.getId());
         //fragemnt最大的布局不应该有动画效果
-        FocusMoveHelper.getInstance().addNoAnimViews(parentView.getId(),parentView.getId());
+        FocusMoveHelper.getInstance().addNoAnimViews(parentView.getId(), parentView.getId());
         //会优先其子类控件而获取到焦点
         parentView.setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
         //设置焦点
@@ -165,7 +165,7 @@ public class FocusMoveUtil {
         //标识fragment最大的布局的id
         FocusMoveHelper.getInstance().addFragParentViewIds(parentView.getId(), parentView.getId());
         //fragemnt最大的布局不应该有动画效果
-        FocusMoveHelper.getInstance().addNoAnimViews(parentView.getId(),parentView.getId());
+        FocusMoveHelper.getInstance().addNoAnimViews(parentView.getId(), parentView.getId());
         //会优先其子类控件而获取到焦点
         parentView.setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
         //设置焦点
@@ -242,5 +242,44 @@ public class FocusMoveUtil {
         } else {
             return false;
         }
+    }
+
+
+    /**
+     * activity 的子view 只有放大动画
+     *
+     * @param activity act
+     */
+    public static void initActivityBigFocusView(Activity activity) {
+        initActivityBigFocusView(activity, 300, 1.1f);
+    }
+
+    /**
+     * activity 的子view 只有放大动画
+     *
+     * @param activity  act
+     * @param duration  动画时间
+     * @param bigNumber 动画放大系数
+     */
+    public static void initActivityBigFocusView(Activity activity, final int duration, final float bigNumber) {
+        activity.getWindow().getDecorView().getViewTreeObserver().
+                addOnGlobalFocusChangeListener(new ViewTreeObserver.OnGlobalFocusChangeListener() {
+
+                    @Override
+                    public void onGlobalFocusChanged(final View oldFocus, final View newFocus) {
+                        if (oldFocus != null) {
+                            //移除变大效果
+                            FocusAnimationUtil.setViewAnimatorBig(oldFocus, false, duration, bigNumber);
+                        }
+
+                        if (newFocus == null) {
+                            return;
+                        }
+                        //放大和移动
+                        newFocus.bringToFront();
+                        FocusAnimationUtil.setViewAnimatorBig(newFocus, true, duration, bigNumber);
+                    }
+
+                });
     }
 }
