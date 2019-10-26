@@ -1,3 +1,3 @@
-include ':app', ':libx_base', ':libx_adapter', ':libx_style', ':libx_util', ':libx_widget', ':libx_tv_widget', ':libx_tv_util', ':libx_tv_vlc', ':libx_http', ':libx_util_fresco', ':libx_crosswalk', ':libx_app_update'
+include ':app', ':libx_base', ':libx_adapter', ':libx_style', ':libx_util', ':libx_widget', ':libx_tv_widget', ':libx_tv_util', ':libx_tv_vlc', ':libx_http', ':libx_util_fresco', ':libx_app_update'
 
 

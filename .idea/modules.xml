@@ -7,7 +7,6 @@
       <module fileurl="file://$PROJECT_DIR$/libx_adapter/libx_adapter.iml" filepath="$PROJECT_DIR$/libx_adapter/libx_adapter.iml" />
       <module fileurl="file://$PROJECT_DIR$/libx_app_update/libx_app_update.iml" filepath="$PROJECT_DIR$/libx_app_update/libx_app_update.iml" />
       <module fileurl="file://$PROJECT_DIR$/libx_base/libx_base.iml" filepath="$PROJECT_DIR$/libx_base/libx_base.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libx_crosswalk/libx_crosswalk.iml" filepath="$PROJECT_DIR$/libx_crosswalk/libx_crosswalk.iml" />
       <module fileurl="file://$PROJECT_DIR$/libx_http/libx_http.iml" filepath="$PROJECT_DIR$/libx_http/libx_http.iml" />
       <module fileurl="file://$PROJECT_DIR$/libx_style/libx_style.iml" filepath="$PROJECT_DIR$/libx_style/libx_style.iml" />
       <module fileurl="file://$PROJECT_DIR$/libx_tv_util/libx_tv_util.iml" filepath="$PROJECT_DIR$/libx_tv_util/libx_tv_util.iml" />
