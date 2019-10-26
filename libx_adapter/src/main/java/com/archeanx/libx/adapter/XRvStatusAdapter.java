@@ -69,6 +69,17 @@ public abstract class XRvStatusAdapter<T> extends XRvPureDataAdapter<T> {
      */
     private OnStatusItemClickListener mOnStatusItemClickListener;
 
+
+    /**
+     * 是否显示了状态layout
+     *
+     * @return true：显示了
+     */
+    public boolean isShowStatusLayout() {
+        return mItemStatusIndex != ITEM_STATUS_DEFAULT;
+    }
+
+
     /**
      * 设置 加载数据为空状态时的副标题
      */
