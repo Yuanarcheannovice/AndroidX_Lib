@@ -23,7 +23,7 @@ public class FocusAnimationUtil {
 
 
     public static void focusAlphaAnimator(final View view, final View focusView, float scale) {
-        focusAlphaAnimator(view,focusView,scale,43,43);
+        focusAlphaAnimator(view, focusView, scale, 43, 43);
     }
 
 
@@ -81,11 +81,22 @@ public class FocusAnimationUtil {
      * @param scrollY
      */
     public static void focusMoveAnimatorBig(final View view, final View focusView, final int scrollY, float scale) {
+        focusMoveAnimatorBig(view, focusView, scrollY, scale, 43, 43);
+    }
+
+    /**
+     * 焦点移动显示动画 放大比例控制
+     *
+     * @param view      即将获取到焦点的view
+     * @param focusView 焦点view
+     * @param scrollY
+     */
+    public static void focusMoveAnimatorBig(final View view, final View focusView, final int scrollY, float scale, int offSetX, int offSetY) {
         int[] toLocation = new int[2];
         view.getLocationOnScreen(toLocation);
 
-        float toWidth = view.getWidth() * scale + 43;
-        float toHeight = view.getHeight() * scale + 43;
+        float toWidth = view.getWidth() * scale + offSetX;
+        float toHeight = view.getHeight() * scale + offSetY;
         float toX = toLocation[0] - (toWidth - view.getWidth()) / 2;
         float toY = toLocation[1] - (toHeight - view.getHeight()) / 2;
 
@@ -260,7 +271,7 @@ public class FocusAnimationUtil {
     private static final float ORIGIN_SCALE = 1.0f;
 
     public static void setViewAnimatorBig(View v, boolean focus) {
-        setViewAnimatorBig(v, focus,300, ZOOM_SCALE);
+        setViewAnimatorBig(v, focus, 300, ZOOM_SCALE);
     }
 
 
