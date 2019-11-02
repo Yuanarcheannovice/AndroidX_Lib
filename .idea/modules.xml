@@ -10,7 +10,6 @@
       <module fileurl="file://$PROJECT_DIR$/libx_http/libx_http.iml" filepath="$PROJECT_DIR$/libx_http/libx_http.iml" />
       <module fileurl="file://$PROJECT_DIR$/libx_style/libx_style.iml" filepath="$PROJECT_DIR$/libx_style/libx_style.iml" />
       <module fileurl="file://$PROJECT_DIR$/libx_tv_util/libx_tv_util.iml" filepath="$PROJECT_DIR$/libx_tv_util/libx_tv_util.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libx_tv_vlc/libx_tv_vlc.iml" filepath="$PROJECT_DIR$/libx_tv_vlc/libx_tv_vlc.iml" />
       <module fileurl="file://$PROJECT_DIR$/libx_tv_widget/libx_tv_widget.iml" filepath="$PROJECT_DIR$/libx_tv_widget/libx_tv_widget.iml" />
       <module fileurl="file://$PROJECT_DIR$/libx_util/libx_util.iml" filepath="$PROJECT_DIR$/libx_util/libx_util.iml" />
       <module fileurl="file://$PROJECT_DIR$/libx_util_fresco/libx_util_fresco.iml" filepath="$PROJECT_DIR$/libx_util_fresco/libx_util_fresco.iml" />
